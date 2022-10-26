@@ -57,6 +57,8 @@ header {
   width: 100%;
   background: var(--primary-color-2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 3;
 }
 
 .logo-top {
@@ -89,6 +91,7 @@ header {
   color: var(--primary-color-1);
 }
 
+
 .hamburger-menu, .hamburger-line {
   display: none;
 }
@@ -96,10 +99,10 @@ header {
 /* Section met kaart */
 
 section {
-  /* background-color: var(--primary-color-2); */
-  height: 39em;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   position: relative;
 }
@@ -123,6 +126,7 @@ h1 {
   align-self: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5.25rem;
   text-align: center;
   padding: 1rem;
   line-height: 1;
@@ -141,28 +145,56 @@ h1 {
 article {
   height: 19.625em;
   width: 100%;
+  padding: 2rem;
 }
 
 article:nth-child(even) {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+article:nth-child(odd) {
   background-color: var(--primary-color-2);
   color: var(--white-color);
 }
 
-article:nth-child(odd) {
-  background-color: var(--white-color);
+article:first-of-type {
+  height: 39rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+article:first-of-type img {
+  height: 30rem;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-self: center;
+}
+
+article:first-of-type h2 {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  height: auto;
+}
+
+article:first-of-type p {
+  max-width: 25rem;
+  width: 25rem;
+  margin: 0;
+  font-size: 1.5em;
 }
 
 h2 {
-  font-size: 2em;
-  margin-left: 2rem;
-  padding-top: 1em;
+  font-size: 2.2em;
   display: block;
-  height: 2em;
 }
 
 .citymap {
   height: 12em;
-  margin: 0 2rem;
   border: var(--accent-color-2) solid 5px;
   border-radius: 1rem;
   grid-area: 1/1/2/2;
@@ -170,7 +202,6 @@ h2 {
 
 .map-pin {
   height: 12em;
-  margin: 0 2rem;
   margin-left: auto;
   grid-area: 1/4/2/5;
 }
@@ -178,13 +209,13 @@ h2 {
 .info-city {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .info-zone {
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
+  align-self: center;
 }
 
 .adres-1 {
@@ -204,7 +235,7 @@ h3 {
   font-weight: 600;
 }
 
- p {
+p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -216,6 +247,9 @@ h3 {
 }
 
 .link-odd {
+  color: var(--white-color);
+  width: max-content;
+  font-weight: 600;
   color: var(--black-color);
   width: max-content;
   font-weight: 600;
@@ -325,10 +359,10 @@ a.links-site:hover {
 
   article {
     height: fit-content;
+    padding: 2rem;
   }
 
-  article > h2 {
-    margin: 0;
+  article h2 {
     text-align: center;
   }
 
@@ -338,8 +372,8 @@ a.links-site:hover {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-bottom: 2rem;
     text-align: center;
+    margin-top: 2rem;
   }
 
   .citymap {
@@ -365,8 +399,8 @@ a.links-site:hover {
   }
 }
 
-/* Breakpoint op 935px max width ivm foto*/
-@media screen and (max-width: 935px) {
+/* Breakpoint op 987px max width ivm foto*/
+@media screen and (max-width: 987px) {
  .bg-img {
     object-fit: cover;
     height: 100%;
@@ -388,5 +422,36 @@ a.links-site:hover {
 
   p.links-site {
     margin: 1rem auto;
+  }
+}
+
+/* Breakpoint op 917px max width ivm informatie article*/
+
+@media screen and (max-width: 917px) {
+  article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: fit-content;
+    padding: 2rem;
+  }
+
+  article:first-of-type h2 {
+    text-align: center;
+  }
+
+  article:first-of-type p {
+    max-width: 30rem;
+    width: auto;
+  }
+
+  article:first-of-type img {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: 2rem;
   }
 }
