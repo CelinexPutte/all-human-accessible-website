@@ -399,8 +399,8 @@ a.links-site:hover {
   }
 }
 
-/* Breakpoint op 987px max width ivm foto*/
-@media screen and (max-width: 987px) {
+/* Breakpoint op 1070px max width ivm foto*/
+@media screen and (max-width: 1070px) {
  .bg-img {
     object-fit: cover;
     height: 100%;
