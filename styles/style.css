@@ -43,7 +43,13 @@ html {
 }
 
 body {
-  height: 100vh;
+  height: 100vh
+}
+
+:focus {
+  outline: 2px solid var(--accent-color);
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* Header met logo en menu */
@@ -191,6 +197,7 @@ article:first-of-type p {
 h2 {
   font-size: 2.2em;
   display: block;
+  line-height: 1;
 }
 
 .citymap {
