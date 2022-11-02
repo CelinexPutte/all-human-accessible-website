@@ -38,10 +38,6 @@
   line-height: 1.4;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   height: 100vh
 }
